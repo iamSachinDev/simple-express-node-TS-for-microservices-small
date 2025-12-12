@@ -1,7 +1,7 @@
-import pino from 'pino'
-import { config } from '../config/env'
+import pino from 'pino';
+import { config } from '../config/env';
 
-const isDev = config.nodeEnv !== 'production'
+const isDev = config.nodeEnv !== 'production';
 
 export const logger = pino({
   base: { serviceId: config.serviceId },
@@ -10,4 +10,4 @@ export const logger = pino({
     isDev && config.nodeEnv !== 'test'
       ? { target: 'pino-pretty', options: { colorize: true, translateTime: 'SYS:standard' } }
       : undefined
-})
+});

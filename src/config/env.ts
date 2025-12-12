@@ -1,6 +1,6 @@
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
 
-dotenv.config()
+dotenv.config();
 
 export const config = {
   nodeEnv: process.env.NODE_ENV ?? 'development',
@@ -19,4 +19,4 @@ export const config = {
   // Azure
   azureSpeechKey: process.env.AZURE_SPEECH_KEY,
   azureRegion: process.env.AZURE_REGION
-}
+};

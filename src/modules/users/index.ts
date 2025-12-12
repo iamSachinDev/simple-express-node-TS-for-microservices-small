@@ -1,4 +1,4 @@
-import { ApiModule } from '../types'
-import router from './user.routes'
+import { ApiModule } from '../types';
+import router from './user.routes';
 
-export const usersModule: ApiModule = { name: 'users', basePath: '/users', router }
+export const usersModule: ApiModule = { name: 'users', basePath: '/users', router };
