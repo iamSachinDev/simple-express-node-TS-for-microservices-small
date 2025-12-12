@@ -22,10 +22,12 @@ logs/
 
 # IDE
 .vscode/
+!/.vscode/extensions.json
 .idea/
 
 # Testing
 coverage/
+.tsbuildinfo
 
 # Swagger
 # src/swagger_output.json (kept tracked as it is used by the app)
