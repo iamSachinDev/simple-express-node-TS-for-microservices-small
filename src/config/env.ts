@@ -14,8 +14,7 @@ export const config = {
   // Security config
   corsOrigins: process.env.CORS_ORIGINS ?? '*',
 
-  compressionLevel: parseInt(process.env.COMPRESSION_LEVEL ?? '6', 10),
-  compressionThreshold: parseInt(process.env.COMPRESSION_THRESHOLD ?? '1024', 10),
+
   // Azure
   azureSpeechKey: process.env.AZURE_SPEECH_KEY,
   azureRegion: process.env.AZURE_REGION

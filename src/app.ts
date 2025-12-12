@@ -1,4 +1,4 @@
-import compression from 'compression';
+
 import cors from 'cors';
 import express from 'express';
 
@@ -29,7 +29,7 @@ app.use(
 
 // CORS configuration
 const corsOrigins =
-    config.corsOrigins === '*' ? '*' : config.corsOrigins.split(',').map((origin) => origin.trim());
+  config.corsOrigins === '*' ? '*' : config.corsOrigins.split(',').map((origin) => origin.trim());
 
 const corsOptions = {
   origin: corsOrigins,
@@ -37,19 +37,7 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-// Compression (gzip)
-app.use(
-  compression({
-    level: config.compressionLevel,
-    threshold: config.compressionThreshold,
-    filter: (req, res) => {
-      if (req.headers['x-no-compression']) {
-        return false;
-      }
-      return compression.filter(req, res);
-    }
-  })
-);
+// Compression removed;
 
 // Body parser
 app.use(express.json());
