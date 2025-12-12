@@ -29,9 +29,9 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon --watch src --ext ts --exec ts-node src/server.ts",
     "clean": "rimraf dist .tsbuildinfo",
-    "prebuild": "npm run clean",
+    "prebuild": "npm run clean && npm run swagger-gen",
     "build": "tsc",
-    "start": "npm run swagger-gen && cross-env NODE_ENV=production node dist/server.js",
+    "start": "cross-env NODE_ENV=production node dist/server.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write \"src/**/*.{ts,js,json,md}\"",
